@@ -72,10 +72,22 @@ def load_model():
         Hugging Face pipeline object
     """
     return pipeline(
-        "sentiment-analysis",
-        model="cardiffnlp/twitter-roberta-base-sentiment"
+        task = "sentiment-analysis",
+        model = "cardiffnlp/twitter-roberta-base-sentiment"
     )
 
 
 # Load model once globally to avoid repeated initialization (performance optimization)
 classifier = load_model()
+
+if __name__ == "__main__":
+    test_sentences = [
+        "I love this!",
+        "This is terrible.",
+        "People can be... weird and interesting sometimes.",
+        "The meeting is at 3 PM."
+    ]
+
+    for sentence in test_sentences:
+        sentiment, score = get_sentiment(sentence)
+        print(f"{sentence} -> {sentiment} ({score:.2f})")
