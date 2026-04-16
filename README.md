@@ -74,7 +74,7 @@ python app.py
 python test_sentences.py
 ```
 
-## 🧪 Test Results
+## Test Results
 
 The model was evaluated on a dataset consisting of:
 
