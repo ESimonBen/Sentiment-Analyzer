@@ -130,12 +130,6 @@ Result: Correct
 
 ---
 
-## Demo
-
-(Add your 1–2 minute screen recording link here)
-
----
-
 ## Notes
 
 - The model is loaded once globally to improve performance and avoid repeated initialization overhead.
